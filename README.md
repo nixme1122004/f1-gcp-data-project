@@ -101,3 +101,39 @@ This project is intended to practice:
 
 This is a dummy/learning project and is not intended to represent a
 production F1 analytics system.
+
+## Automated Qualifying Data Pipeline
+
+The project includes an automated batch pipeline for F1 qualifying data.
+
+### Pipeline Flow
+
+Cloud Storage
+→ BigQuery Data Transfer Service
+→ `F1_Qualifying_Data.qualifying_raw`
+→ BigQuery Scheduled Query
+→ `F1_Qualifying_Data.qualifying_clean`
+
+### Ingestion
+
+New qualifying CSV files are placed in the Cloud Storage `qualifying/` folder.
+
+BigQuery Data Transfer Service runs every 24 hours and appends the files to the `qualifying_raw` table.
+
+### Data Cleaning
+
+A BigQuery Scheduled Query runs every 24 hours.
+
+It:
+- removes duplicate records using `SELECT DISTINCT`
+- removes records with missing lap times
+- writes the cleaned data to `qualifying_clean`
+
+### Technologies Used
+
+- Google Cloud Storage
+- BigQuery
+- BigQuery Data Transfer Service
+- BigQuery Scheduled Queries
+- SQL
+- GitHub
