@@ -137,3 +137,29 @@ It:
 - BigQuery Scheduled Queries
 - SQL
 - GitHub
+
+## Power BI Dashboard
+
+The cleaned qualifying data is connected to Power BI for visualization and analysis.
+
+### Dashboard Visualizations
+
+The dashboard includes:
+
+- Fastest vs Average Qualifying Lap by Driver
+- Average Lap Time by Tire Compound
+- Average Lap Time by Lap
+- Sector 1, Sector 2 and Sector 3 performance by Driver
+
+### Key Insights
+
+- VER recorded the fastest qualifying lap at approximately 95.13 seconds.
+- MEDIUM tires had a slightly lower average lap time than SOFT tires in this dataset.
+- Lap-time trends vary significantly across the recorded qualifying laps.
+- Sector-level analysis provides additional insight into driver performance across different parts of the circuit.
+
+### Power BI File
+
+The dashboard is saved as:
+
+`F1_Qualifying_Analytics.pbix`
